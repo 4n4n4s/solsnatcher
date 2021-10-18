@@ -31,10 +31,15 @@ if os.path.isfile(PRETTY_FILE):
 missing_snatchers = list(range(1, SNATCHERS_SIZE+1))
 
 for snatcher in snatchers:
-    missing_snatchers.remove(int(snatcher))
+    #print(snatchers[snatcher]["eyewear"]["item"])
+    if snatchers[snatcher]["eyewear"]["item"] == "Ninja Eye Mask":
+        continue;
+    else:
+        missing_snatchers.remove(int(snatcher))
+
     #print(snatcher + "a ")
 print(missing_snatchers)
-
+#exit()
 count_to_save = 0
 for missing_snatcher in missing_snatchers:
     print(missing_snatcher)
@@ -42,7 +47,13 @@ for missing_snatcher in missing_snatchers:
 
     snatcher = {}
     soup = BeautifulSoup(response.content, "html.parser")
+    if "CAPTCHA" in soup.getText():
+        print("Resolve captcha - Cloudflare")
+        print(soup.getText())
+        exit()
     results = soup.find(class_="attributes")
+    print(results)
+    exit()
     if results != None:
         children = results.findChildren("li", recursive = False)
         for child in children:
@@ -51,9 +62,9 @@ for missing_snatcher in missing_snatchers:
             if value.find('%') > 0:
                 
                 details = {}
-                details["item"] = value[0:value.index('(')].strip()
-                rarity = value[value.index('(')+1:value.index('%')].strip()
-                details["rarity"] = rarity
+                details["item"] = value[0:value.rfind('(')].strip()
+                rarity = value[value.rfind('(')+1:value.index('%')].strip()
+                details["rarity"] = float(rarity)
                 snatcher[key] = details
             else:
                 snatcher[key] = value
