@@ -3,6 +3,7 @@
 import json
 import os.path
 import requests
+import cloudscraper
 from bs4 import BeautifulSoup
 
 PRETTY_FILE = "snatcher_data.json"
@@ -31,19 +32,15 @@ if os.path.isfile(PRETTY_FILE):
 missing_snatchers = list(range(1, SNATCHERS_SIZE+1))
 
 for snatcher in snatchers:
-    #print(snatchers[snatcher]["eyewear"]["item"])
-    if snatchers[snatcher]["eyewear"]["item"] == "Ninja Eye Mask":
-        continue;
-    else:
-        missing_snatchers.remove(int(snatcher))
+    missing_snatchers.remove(int(snatcher))
 
-    #print(snatcher + "a ")
 print(missing_snatchers)
-#exit()
+
 count_to_save = 0
 for missing_snatcher in missing_snatchers:
     print(missing_snatcher)
-    response = requests.get("https://howrare.is/solsnatchers/"+str(missing_snatcher)+"/")
+    scraper = cloudscraper.create_scraper()
+    response = scraper.get("https://howrare.is/solsnatchers/"+str(missing_snatcher)+"/")
 
     snatcher = {}
     soup = BeautifulSoup(response.content, "html.parser")
@@ -52,8 +49,7 @@ for missing_snatcher in missing_snatchers:
         print(soup.getText())
         exit()
     results = soup.find(class_="attributes")
-    print(results)
-    exit()
+    
     if results != None:
         children = results.findChildren("li", recursive = False)
         for child in children:
