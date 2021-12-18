@@ -61,5 +61,5 @@ for snatcher in snatchers:
 
     min_snatchers[snatcher] = min_snatcher
 
-write_to_file(MIN_FILE, min_snatchers, 4)
+write_to_file(MIN_FILE, min_snatchers, 0)
 
