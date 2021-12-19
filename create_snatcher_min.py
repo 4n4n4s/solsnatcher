@@ -34,10 +34,10 @@ for snatcher in snatchers:
     rare = 0
     uncommon = 0
     common = 0
-    LIMIT_LEGENDARY = 1.32
-    LIMIT_EPIC = 4.84
-    LIMIT_RARE = 15
-    LIMIT_UNCOMMON = 30
+    LIMIT_LEGENDARY = 1.49
+    LIMIT_EPIC = 4.99
+    LIMIT_RARE = 14.99
+    LIMIT_UNCOMMON = 29.99
 
     for attribute in attributes_to_track:
         rarity = snatcher_data[attribute]["rarity"]
