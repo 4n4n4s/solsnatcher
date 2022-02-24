@@ -1,0 +1,78 @@
+{
+    "Background": {
+        "Blue Hellfire": 8.78,
+        "Red Moon Graveyard": 19.64,
+        "Purple Hellfire": 5.44,
+        "Graveyard": 27.32,
+        "Cold Forest": 4,
+        "Hellfire": 5.78,
+        "Zombie Graveyard": 14.84,
+        "Green Hellfire": 11.02,
+        "Dark Forbidden Forest": 3.18
+    },
+    "Body": {
+        "Green Body": 16.86,
+        "Grey Body": 24.52,
+        "Purple Body": 7.06,
+        "Blue Body": 36.82,
+        "Ivory Body": 11.02,
+        "Red Body": 3.72
+    },
+    "Head": {
+        "Grey Skeleton Head": 13.74,
+        "Devilish Horned Cerberus Head": 1.64,
+        "Common Skeleton Head": 28.06,
+        "Green Skeleton Head": 10.04,
+        "Blue Cerberus Head": 1.98,
+        "Blue Skeleton Head": 12.54,
+        "Gold Crowned Head": 4.66,
+        "White Crowned Head": 7.22,
+        "Horned Skeleton Head": 4.74,
+        "Red Skeleton Head": 9.6,
+        "Golden Horned Cerberus Head": 2.34,
+        "Fiery Cerberus Head": 1.4,
+        "Red Horned Cerberus Head": 1.08,
+        "Toxic Cerberus Head": 0.96
+    },
+    "Eyes": {
+        "Green Reptile Eyes": 33.54,
+        "NONE": 9.46,
+        "Red Laser Eyes": 13.32,
+        "Yellow Reptile Eyes": 24.2,
+        "Yellow Laser Eyes": 16.02,
+        "Blue Laser Eyes": 3.46
+    },
+    "Legs": {
+        "NONE": 62.5,
+        "Blue Flaming Legs": 6.32,
+        "Devilish Flaming Legs": 5.4,
+        "Flaming Legs": 9.42,
+        "Bloody Legs": 8.54,
+        "Toxic Legs": 4.74,
+        "Lava Legs": 3.08
+    },
+    "Collar": {
+        "NONE": 36.36,
+        "Dark Blue Spiked Collar": 8.96,
+        "Diamond Chain Collar": 4.78,
+        "Blue Bone Collar": 5.3,
+        "Green Bone Collar": 4.98,
+        "Leather Spiked Collar": 6.08,
+        "Purple Spiked Collar": 8.06,
+        "Metal Chain Collar": 5.9,
+        "Camo Spiked Collar": 9.38,
+        "Gold Chain Collar": 5.12,
+        "Red Bone Collar": 5.08
+    },
+    "Mouth Object": {
+        "Bloody Hand": 3.1,
+        "Purple Fire Breath": 6.82,
+        "NONE": 40.54,
+        "Green Fire Breath": 4.46,
+        "Massive Bone": 11.42,
+        "Fire Breath": 7.7,
+        "Metal Chains": 13.88,
+        "Gold Chains": 8.86,
+        "Zombie Hand": 3.22
+    }
+}
